@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	ERR3335404_1	/home/akhil/nextflow/work/1b/e91daaaa8a6a3d68ef2bdf152af6a8/ERR3335404_1_fastqc.zip
+FastQC	all_sections	ERR3335404_2	/home/akhil/nextflow/work/1b/e91daaaa8a6a3d68ef2bdf152af6a8/ERR3335404_2_fastqc.zip

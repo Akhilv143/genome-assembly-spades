@@ -1,0 +1,262 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Before_start_2AXKLNV1R6DWM1VTM2NNQ6TS2KREG0TF
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_97AAK8VN3U0M5YC4AFN62NUPNT9NAX9I
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_30pgths_
+  job_uuid: SPAdes_Read_error_correction_6SU1HWVSEHUXO58O8ATYOFW8L8PMKDVK
+  mpi_support: false
+  output_files:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/corrected/corrected.yaml
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /home/akhil/miniforge3/envs/nextflow-env/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /home/akhil/miniforge3/envs/nextflow-env/share/spades
+  - --max_threads
+  - '12'
+  - --output_dir
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_corrected_reads_compression_0W3JTJAPQGJN5VE3JFK1GSR49GEO6PMM
+  mpi_support: false
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/python3
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_VTIDDXB12KQIEOPQCEI9WZTP54T3BF79
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_KGIWM9V5ER2XBST4IE0AJKETUGJMGS8E
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K21/configs/config.info
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K21/configs/careful_mode.info
+  config_dir: K21
+  del_after: []
+  job_uuid: hpcSPAdes_K21_3RGNEGOKE0BDD9YF8D5L0AQUGHP87OSZ
+  mpi_support: true
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/{spades_core}
+  short_name: k21
+- STAGE: K33
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K33/configs/config.info
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K33/configs/careful_mode.info
+  config_dir: K33
+  del_after: []
+  job_uuid: hpcSPAdes_K33_KXZ0EPKY49OUJF65DLBZ9JBPNO7Q2CRV
+  mpi_support: true
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/{spades_core}
+  short_name: k33
+- STAGE: K55
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K55/configs/config.info
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K55/configs/careful_mode.info
+  config_dir: K55
+  del_after: []
+  job_uuid: hpcSPAdes_K55_8IWYIX077TQFM36OSVQNN4LVSEMWBFZG
+  mpi_support: true
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/{spades_core}
+  short_name: k55
+- STAGE: K77
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K77/configs/config.info
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K77/configs/careful_mode.info
+  config_dir: K77
+  del_after: []
+  job_uuid: hpcSPAdes_K77_ZNOGEUX2ZXKZDCGV9NU1GKK7BTD8PX3U
+  mpi_support: true
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/{spades_core}
+  short_name: k77
+- STAGE: K99
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K99/configs/config.info
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K99/configs/careful_mode.info
+  config_dir: K99
+  del_after: []
+  job_uuid: hpcSPAdes_K99_1ZSQDASTGSQLIWNM44MMTQFQJPRKNZO9
+  mpi_support: true
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/{spades_core}
+  short_name: k99
+- STAGE: K127
+  args:
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/configs/config.info
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/configs/careful_mode.info
+  config_dir: K127
+  del_after: []
+  job_uuid: hpcSPAdes_K127_KD4SXPGMQI2QHQOEG29PKKNWXF0Q5QJB
+  mpi_support: true
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/{spades_core}
+  short_name: k127
+- STAGE: Copy files
+  args:
+  - /home/akhil/miniforge3/envs/nextflow-env/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/before_rr.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/before_rr.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/assembly_graph_after_simplification.gfa
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/assembly_graph_after_simplification.gfa
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/final_contigs.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/contigs.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/first_pe_contigs.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/first_pe_contigs.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/strain_graph.gfa
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/strain_graph.gfa
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/scaffolds.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/scaffolds.fasta
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/scaffolds.paths
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/scaffolds.paths
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/assembly_graph_with_scaffolds.gfa
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/assembly_graph_with_scaffolds.gfa
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/assembly_graph.fastg
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/assembly_graph.fastg
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/K127/final_contigs.paths
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_irf5vv8_
+  job_uuid: SPAdes_Copy_files_X7MQV93EBRIK1I7APB67LUD5EVIMYP5U
+  mpi_support: false
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_FQKE0YNR08H6I1B6D8ST06U74KNWUCAQ
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Mismatch correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Mismatch_correction_PMOE6T0Q08Z2XIS3W7OQVPW55R1P81D9
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: mc_start
+- STAGE: Mismatch correction contigs
+  args:
+  - /home/akhil/miniforge3/envs/nextflow-env/share/spades/spades_pipeline/scripts/correction_iteration_script.py
+  - --corrected
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/contigs.fasta
+  - --assembled
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/misc/assembled_contigs.fasta
+  - --assembly_type
+  - contigs
+  - --output_dir
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404
+  - --bin_home
+  - /home/akhil/miniforge3/envs/nextflow-env/bin
+  config_dir: mismatch_corrector/contigs
+  del_after:
+  - mismatch_corrector/contigs/tmp
+  - tmp/corrector_nss2v_ej
+  job_uuid: SPAdes_Mismatch_correction_contigs_6X3YDE6EMEL3M3ZMWASWTUFYZABL0K2D
+  mpi_support: false
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/python3
+  short_name: mc_contigs
+- STAGE: Mismatch correction scaffolds
+  args:
+  - /home/akhil/miniforge3/envs/nextflow-env/share/spades/spades_pipeline/scripts/correction_iteration_script.py
+  - --corrected
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/scaffolds.fasta
+  - --assembled
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/misc/assembled_scaffolds.fasta
+  - --assembly_type
+  - scaffolds
+  - --output_dir
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404
+  - --bin_home
+  - /home/akhil/miniforge3/envs/nextflow-env/bin
+  config_dir: mismatch_corrector/scaffolds
+  del_after:
+  - mismatch_corrector/scaffolds/tmp
+  - tmp/corrector_qxr1v383
+  job_uuid: SPAdes_Mismatch_correction_scaffolds_4TGGIQ4LKPJ35WGKYDNGTBC3ZV4Q4KDY
+  mpi_support: false
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/python3
+  short_name: mc_scaffolds
+- STAGE: Mismatch correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Mismatch_correction_90CMFOZT34RR9AF42KQIJM40QLVAILU6
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: mc_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /home/akhil/miniforge3/envs/nextflow-env/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/scaffolds.fasta
+  - --misc_dir
+  - /home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Breaking_scaffolds_QU4NCWS0EB0DKV54LM48HYJRTWABEB3V
+  mpi_support: false
+  output_files: []
+  path: /home/akhil/miniforge3/envs/nextflow-env/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  job_uuid: SPAdes_Terminate_B4DA8HUSIBGHHP0AUXZFAWRXZ1PVY2RE
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: terminate

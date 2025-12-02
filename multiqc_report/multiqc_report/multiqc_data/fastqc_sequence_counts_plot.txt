@@ -1,0 +1,3 @@
+Sample	Unique Reads	Duplicate Reads
+ERR3335404_1	239759.0	33312.0
+ERR3335404_2	242737.0	30334.0

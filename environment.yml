@@ -1,0 +1,14 @@
+name: spades_assembly
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.8
+  - spades=4.2.0
+  - fastqc=0.12.1
+  - trimmomatic=0.39
+  - multiqc=1.25
+  - quast=5.2.0
+  - nextflow=24.10.0
+  - openjdk=11

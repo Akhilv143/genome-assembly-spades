@@ -1,0 +1,7 @@
+- "left reads":
+  - "/home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404_1_trimmed.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/home/akhil/nextflow/work/b7/49281c4bea5369974345fceaff2433/ERR3335404_2_trimmed.fastq.gz"
+  "type": "paired-end"

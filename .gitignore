@@ -1,0 +1,70 @@
+# Nextflow work directory and cache
+work/
+.nextflow/
+.nextflow.log*
+*.nextflow.log*
+timeline*.html
+trace*.txt
+dag*.html
+report*.html
+
+# Reference genomes and indices (if present)
+*.fasta.amb
+*.fasta.ann
+*.fasta.bwt
+*.fasta.pac
+*.fasta.sa
+*.fa.amb
+*.fa.ann
+*.fa.bwt
+*.fa.pac
+*.fa.sa
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+.conda/
+.mamba/
+
+# R
+.Rhistory
+.RData
+.Rproj.user
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Slurm/PBS job files
+slurm-*.out
+*.pbs.o*
+*.pbs.e*
+
+
+spades_output/K*/
+spades_output/corrected/
+spades_output/misc/
+spades_output/mismatch_corrector/
+spades_output/tmp/
+spades_output/pipeline_state/
